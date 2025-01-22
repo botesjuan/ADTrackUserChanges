@@ -2,6 +2,8 @@
 
 >This is a CyberSecurity Identity and Access Management tool I wrote to do AD Tracking of User Changes.  
 
+## PowerShell  
+
 The PowerShell Script runs on schedule collecting Active Directory Security Event logs below and store in Microsoft SQL Database:  
 
 * 4720 - user account was created
@@ -31,9 +33,17 @@ The PowerShell Script runs on schedule collecting Active Directory Security Even
 >The powershell script captures the AD logs before they wrap as the amount of security events on busy time period result in logs being lost for historical records.
 >The script have section perfoming a Health Check of Track AD Changes and SQL Table Check email send once a month.  
 
+## MS SQL DB  
+
+>The SQL database store the stored captured security events for tracking whom made changes to which AD identity.  
+
+![mssql-db-query-sample.png](/images/mssql-db-query-sample.png)  
+
 ## Self Service Portal  
 
 >The web portal is running on legacy Windows IIS  
+
+![AD_self_service_portal.png](/images/AD_self_service_portal.png)  
 
 ```
 c:\inetpub\wwwroot\SelfService
